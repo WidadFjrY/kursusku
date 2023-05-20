@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="../style/style.css" />
+    <title>Kursusku | Course</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <h1>
+        <a href="../index.html">Kursus<span>ku</span></a>
+      </h1>
+      <form action="">
+        <a href="#blog">Blog</a>
+        <img src="./img/lup.png" width="20" alt="" />
+        <input type="text" placeholder="Cari kursus di Kursusku" />
+      </form>
+      <ul>
+        <li>
+          <a id="pelajar" href="#home">Pelajar di Kursusku</a>
+          <div id="dummy"></div>
+          <div id="pelajar-content">
+            <p>
+              Ayo bergabung di Kursusku sudah lebih dari 10.000 pelajar yang
+              sudah belajar di Kursusku
+            </p>
+            <button id="btn-course">Beli Course Sekarang</button>
+          </div>
+        </li>
+        <li>
+          <a id="mengajar" href="#kursus-saya">Mengajar di Kursusku</a>
+          <div id="dummy"></div>
+          <div id="mengajar-content">
+            <p>Sudah lebih dari 200+ instruktur profesional</p>
+            <button id="btn-instruktur">Daftar Instruktur</button>
+          </div>
+        </li>
+      </ul>
+      <div>
+        <button onclick="loginClick()">Masuk</button>
+        <button>Daftar</button>
+      </div>
+    </nav>
+
+    <!-- Form login -->
+    <div id="overlay"></div>
+    <section class="form-login" id="form-login">
+      <h1>Login</h1>
+      <form action="">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </form>
+      <i data-feather="user" class="user"></i>
+      <i data-feather="lock" class="lock"></i>
+      <a href="">Lupa Password?</a>
+      <div class="remember-me">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" class="checkbox">Ingat Saya</label>
+      </div>
+      <button onclick="formButton()">Login</button>
+    </section>
+
+    <div class="verifikasi" id="verifikasi">
+      <h4>Buktikan bahwa anda bukan robot</h4>
+      <img src="../img/puzzel.png" id="gambar" alt="" />
+      <img src="../img/bg-puzzel.jpg" width="300" alt="" />
+      <input type="range" min="0" max="100" value="0" id="slider" />
+    </div>
+
+    <!-- Video -->
+    <section class="course-video">
+      <div class="content">
+        <iframe
+          width="896"
+          height="504"
+          src="https://www.youtube.com/embed/jiUxHm9l1KY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <div>
+          <h2>Materi Selanjutnya</h2>
+          <ul>
+            <li>
+              Pengenalan Java <br />
+              <p>Duration : 1:32:00</p>
+            </li>
+            <li class="play">
+              <i data-feather="play" width="20"></i>
+              <div>
+                Java Dasar<br />
+                <p>Duration : 1:32:00</p>
+              </div>
+            </li>
+            <li>
+              Java Object Oriented Programming<br />
+              <p>Duration : 1:32:00</p>
+            </li>
+            <li>
+              Java Standard Library<br />
+              <p>Duration : 1:32:00</p>
+            </li>
+            <li>
+              Java Database<br />
+              <p>Duration : 1:32:00</p>
+            </li>
+            <li>
+              Java Validation<br />
+              <p>Duration : 1:32:00</p>
+            </li>
+          </ul>
+          <button>Lihat Lebih Banyak Materi</button>
+        </div>
+      </div>
+
+      <div class="description">
+        <h2>Deskeripsi Video</h2>
+        <pre>
+Di materi ini kita akan belajar dasar-dasar bahasa pemrograman Java. Materinya akan membahas secara rinci dasar-dasar pemrograman Java yang
+perlu dikuasai sebelum kita belajar pemrograman berorientasi objek di Java.
+
+#java #javaDasar #javaFundamental
+
+PREMIUM COURSE JAVA : https://www.udemy.com/course/pemrogra...
+
+Slide : https://docs.google.com/presentation/...
+
+Source Code : https://github.com/ProgrammerZamanNow...
+
+Materi Video :
+00:00:00 - Pendahuluan
+00:02:27 - Pengenalan Java
+00:17:10 - Menginstall Java
+00:28:14 - Program Hello World
+00:41:56 - Tipe Data Number
+00:56:59 - Tipe Data Character
+01:00:21 - Tipe Data Boolean
+01:03:00 - Tipe Data String
+01:07:55 - Variable
+01:18:42 - Tipe Data Bukan Primitif
+01:28:00 - Tipe Data Array
+01:42:35 - Operasi Matematika
+01:50:54 - Operasi Perbandingan
+01:53:38 - Operasi Boolean
+01:59:21 - Expression, Statement dan Block
+02:05:55 - If Statement
+02:15:19 - Switch Statement
+02:27:32 - Ternary Operator
+02:31:27 - For Loop
+02:39:07 - While Loop
+02:41:12 - Do While Loop
+02:44:48 - Break dan Continue
+02:50:55 - For Each
+02:55:32 - Method
+03:00:12 - Method Parameter
+03:03:23 - Method Return Value
+03:09:57 - Method Variable Argument
+03:16:24 - Method Overloading
+03:19:34 - Recursive Method
+03:29:00 - Scope
+03:33:28 - Komentar
+03:38:48 - Materi Selanjutnya
+03:39:45 - Penutup
+
+Donasi :
+Saweria : https://saweria.co/ProgrammerZamanNow
+
+Social Media :
+Instagram : https://www.instagram.com/ProgrammerZ...
+Youtube :   
+
+ / programmerzamannow  
+Facebook : https://www.facebook.com/ProgrammerZa...
+Telegram : https://t.me/ProgrammerZamanNow
+        </pre>
+      </div>
+    </section>
+
+    <!-- Instruktur -->
+    <section class="instruktur-profile">
+      <div>
+        <h2>Instruktur</h2>
+        <div class="instruktur-profile-desc">
+          <img src="../img/profile.png" width="100" alt="" />
+          <div>
+            <h3>Eko Kurniawan Khanedy</h3>
+            <p>20.000 Pelajar</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Komentar -->
+    <section class="comments">
+      <h2>Komentar</h2>
+      <div class="comment">
+        <img src="../img/profile.png" width="80" alt="" />
+        <div>
+          <h3>Pengguna Kursusku</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            quod porro animi alias sit? Mollitia dolor neque doloribus natus
+            illum harum distinctio recusandae, qui autem vero explicabo sequi
+            blanditiis officia?
+          </p>
+        </div>
+      </div>
+      <div class="comment">
+        <img src="../img/profile.png" width="80" alt="" />
+        <div>
+          <h3>Pengguna Kursusku</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            quod porro animi alias sit? Mollitia dolor neque doloribus natus
+            illum harum distinctio recusandae, qui autem vero explicabo sequi
+            blanditiis officia?
+          </p>
+        </div>
+      </div>
+      <div class="comment">
+        <img src="../img/profile.png" width="80" alt="" />
+        <div>
+          <h3>Pengguna Kursusku</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            quod porro animi alias sit? Mollitia dolor neque doloribus natus
+            illum harum distinctio recusandae, qui autem vero explicabo sequi
+            blanditiis officia?
+          </p>
+        </div>
+      </div>
+      <div class="comment">
+        <img src="../img/profile.png" width="80" alt="" />
+        <div>
+          <h3>Pengguna Kursusku</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            quod porro animi alias sit? Mollitia dolor neque doloribus natus
+            illum harum distinctio recusandae, qui autem vero explicabo sequi
+            blanditiis officia?
+          </p>
+        </div>
+      </div>
+
+      <p class="show-all">Tampilkan lebih banyak komentar (1.9rb)....</p>
+
+      <textarea
+        rows="4"
+        cols="50"
+        placeholder="Tulis komentar Anda di sini..."
+      ></textarea>
+      <button>Posting Komentar</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <table>
+        <tbody>
+          <tr>
+            <td>Kursusku karir</td>
+            <td>Blog</td>
+            <td>Persyaratan</td>
+          </tr>
+          <tr>
+            <td>Instruktur</td>
+            <td>Bantuan</td>
+            <td>Kebijakan privasi</td>
+          </tr>
+          <tr>
+            <td>Pelajar</td>
+            <td>Dukungan</td>
+            <td>Kebijakan cookie</td>
+          </tr>
+          <tr>
+            <td>Course</td>
+            <td>Investor</td>
+            <td>Situs web</td>
+          </tr>
+        </tbody>
+      </table>
+      <select id="language-select">
+        <option value="id">Indonesia</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+      <h1><span>Kursus</span>ku</h1>
+
+      <p>
+        Copyright 2023 ©️
+        <a href="mailto:email@widadalfajri.com">Widad Al Fajri</a> | Kursusku
+      </p>
+    </footer>
+
+    <script src="../script/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

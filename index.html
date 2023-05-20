@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <title>Kursusku | Home</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav>
+      <h1>Kursus<span>ku</span></h1>
+      <form action="">
+        <a href="#blog">Blog</a>
+        <img src="./img/lup.png" width="20" alt="" />
+        <input type="text" placeholder="Cari kursus di Kursusku" />
+      </form>
+      <ul>
+        <li>
+          <a id="pelajar" href="#home">Pelajar di Kursusku</a>
+          <div id="dummy"></div>
+          <div id="pelajar-content">
+            <p>
+              Ayo bergabung di Kursusku sudah lebih dari 10.000 pelajar yang
+              sudah belajar di Kursusku
+            </p>
+            <button id="btn-course">Beli Course Sekarang</button>
+          </div>
+        </li>
+        <li>
+          <a id="mengajar" href="#kursus-saya">Mengajar di Kursusku</a>
+          <div id="dummy"></div>
+          <div id="mengajar-content">
+            <p>Sudah lebih dari 200+ instruktur profesional</p>
+            <button id="btn-instruktur">Daftar Instruktur</button>
+          </div>
+        </li>
+      </ul>
+      <div>
+        <button onclick="loginClick()">Masuk</button>
+        <button>Daftar</button>
+      </div>
+    </nav>
+
+    <!-- Form login -->
+    <div id="overlay"></div>
+    <section class="form-login" id="form-login">
+      <h1>Login</h1>
+      <form action="">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </form>
+      <i data-feather="user" class="user"></i>
+      <i data-feather="lock" class="lock"></i>
+      <a href="">Lupa Password?</a>
+      <div class="remember-me">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox" class="checkbox">Ingat Saya</label>
+      </div>
+      <button onclick="formButton()">Login</button>
+    </section>
+
+    <div class="verifikasi" id="verifikasi">
+      <h4>Buktikan bahwa anda bukan robot</h4>
+      <img src="./img/puzzel.png" id="gambar" alt="" />
+      <img src="./img/bg-puzzel.jpg" width="300" alt="" />
+      <input type="range" min="0" max="100" value="0" id="slider" />
+    </div>
+
+    <!-- Landing Section -->
+    <section class="landing-section" id="landing-section">
+      <div>
+        <article>
+          <h1>Selamat Datang di</h1>
+          <h2>Kursus<span>ku</span></h2>
+          <p>
+            Platform Belajar Online Terbaik di Indonesia. <br />
+            Kembangkan Pengetahuan dan Keterampilan Anda bersama Kami
+          </p>
+          <a href="#content-programming" class="btn">Temukan Kursus Anda</a>
+        </article>
+        <img src="./img/head.jpg" width="600" alt="" />
+      </div>
+    </section>
+
+    <!-- Content Section filter -->
+    <section class="content" id="content">
+      <article>
+        <h2>
+          Berbagai kursus yang banyak di tawarkan di Kursus<span>ku</span>
+        </h2>
+        <p>
+          Kamu bisa memilih lebih dari 1000+ kursus, seperti Web Developer,
+          Mobile & IOS Develover, Data Scientist, dan masih banyak lagi kursus
+          yang menunggumu
+        </p>
+      </article>
+      <div class="radio-filter">
+        <div id="filter-option-web">
+          <input
+            type="radio"
+            id="web-developer"
+            name="filter"
+            value="web-developer"
+            checked
+          />
+          <label id="label-web" for="web-developer">Web Developer</label>
+        </div>
+
+        <div id="filter-option-mobile">
+          <input
+            type="radio"
+            id="mobile-developer"
+            name="filter"
+            value="mobile-developer"
+          />
+          <label id="label-mobile" for="mobile-developer"
+            >Mobile Developer</label
+          >
+        </div>
+
+        <div id="filter-option-ios">
+          <input
+            type="radio"
+            id="ios-developer"
+            name="filter"
+            value="ios-developer"
+          />
+          <label id="label-ios" for="ios-developer">IOS Developer</label>
+        </div>
+
+        <div id="filter-option-data">
+          <input
+            type="radio"
+            id="data-scientist"
+            name="filter"
+            value="data-scientist"
+          />
+          <label id="label-data" for="data-scientist">Data Scientist</label>
+        </div>
+
+        <div id="filter-option-db">
+          <input
+            type="radio"
+            id="relational-database"
+            name="filter"
+            value="relational-database"
+          />
+          <label id="label-db" for="relational-database"
+            >Relational Database</label
+          >
+        </div>
+      </div>
+      <div class="content-filter">
+        <div id="content-web-developer">
+          <h2>Perluas Peluang Karier Anda Sebagai Seorang Web Developer</h2>
+          <p>
+            Sebagai seorang web developer, Anda memiliki peluang yang luas di
+            dunia digital. Kemampuan dalam pengembangan aplikasi web dan desain
+            UI/UX membuka banyak pintu karier. HTML, CSS, dan JavaScript adalah
+            keterampilan inti yang penting, sedangkan kerangka kerja populer
+            seperti React, Angular, atau Vue.js dapat membantu membangun
+            aplikasi web yang kompleks. Sebagai web developer, Anda juga akan
+            terlibat dalam mengoptimalkan kinerja situs, menerapkan keamanan,
+            dan bekerja dalam kolaborasi tim.
+          </p>
+          <button>Jelajahi Web Developer</button>
+        </div>
+        <div id="content-mobile-developer">
+          <h2>Perluas Karier Anda Sebagai Mobile Developer</h2>
+          <p>
+            Sebagai seorang developer Android, Anda akan menggunakan bahasa
+            pemrograman Java atau Kotlin untuk membangun aplikasi mobile. Dalam
+            peran ini, Anda akan merancang antarmuka pengguna, mengelola data,
+            dan mengintegrasikan fitur-fitur seperti notifikasi push dan sensor
+            perangkat. Menggunakan kerangka kerja seperti Flutter atau React
+            Native, Anda dapat mempercepat pengembangan aplikasi lintas
+            platform. Sebagai developer Android, Anda akan terlibat dalam
+            pengembangan aplikasi e-commerce, media sosial, permainan, dan
+            aplikasi bisnis yang inovatif dan relevan dengan perkembangan
+            terbaru di industri.
+          </p>
+          <button>Jelajahi Mobile Developer</button>
+        </div>
+        <div id="content-ios-developer">
+          <h2>Perluas Karier Anda Sebagai IOS Developer</h2>
+          <p>
+            Dengan kemampuan dalam pengembangan aplikasi untuk platform iOS.
+            Sebagai iOS developer, Anda akan menggunakan bahasa pemrograman
+            Swift atau Objective-C untuk membangun aplikasi iOS. Anda akan
+            memanfaatkan kerangka kerja seperti UIKit, SwiftUI, atau Cocoa Touch
+            untuk merancang antarmuka pengguna yang menarik dan responsif. Tugas
+            Anda meliputi pengembangan fitur aplikasi, pengelolaan data,
+            integrasi dengan layanan eksternal, serta memastikan performa dan
+            keamanan aplikasi yang optimal. Dalam peran ini, Anda akan mengikuti
+            perkembangan terbaru dalam ekosistem iOS dan bekerja sama dengan tim
+            untuk menciptakan pengalaman pengguna yang unik dan bermanfaat
+            melalui aplikasi iOS yang inovatif.
+          </p>
+          <button>Jelajahi IOS Developer</button>
+        </div>
+        <div id="content-data-scientist">
+          <h2>Perluas Karier Anda Sebagai Data Scientist</h2>
+          <p>
+            Perluas karier Anda sebagai data scientist, seorang profesional yang
+            ahli dalam menganalisis dan memahami data untuk mendapatkan wawasan
+            berharga. Sebagai data scientist, Anda akan menggunakan berbagai
+            teknik dan algoritma statistik, pembelajaran mesin (machine
+            learning), dan kecerdasan buatan (artificial intelligence) untuk
+            menganalisis dan menginterpretasikan data.
+          </p>
+          <button>Jelajahi Data Scientist</button>
+        </div>
+        <div id="content-relational-database">
+          <h2>Perluas Karier Anda Sebagai Ahli Database Relasional</h2>
+          <p>
+            Dengan keahlian dalam merancang, mengelola, dan mengoptimalkan basis
+            data relasional. Sebagai seorang spesialis database relasional, Anda
+            akan bekerja dengan sistem manajemen basis data (DBMS) seperti
+            MySQL, PostgreSQL, atau Oracle untuk mengorganisir dan menyimpan
+            data dalam bentuk tabel yang terkait.
+          </p>
+          <button>Jelajahi Relational Database</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section content programing -->
+    <section class="content-programing" id="content-programming">
+      <h2>Berbagai Kursus Bahasa Pemrograman</h2>
+      <div class="java">
+        <h3 class="heading-java">Java</h3>
+        <p class="article">
+          Java adalah bahasa pemrograman populer, platform independen, dan
+          berorientasi objek. Dengan sintaks mirip C/C++, Java memungkinkan
+          pengembangan aplikasi portabel di berbagai platform melalui JVM.
+          Digunakan luas dalam aplikasi desktop, web, permainan, dan backend
+          sistem, Java memiliki keamanan yang kokoh dan fleksibilitas tinggi,
+          membuatnya menjadi pilihan utama pengembang perangkat lunak.
+        </p>
+        <h3>Temukan Kursusnya</h3>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/jiUxHm9l1KY/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>
+              <a href="./src/course-videos.html"
+                >Belajar bahasa pemrograman Java Dasar</a
+              >
+            </h3>
+            <p class="author">Eko Kurniawan Khanedy</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/xk4_1vDrzzo/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>Java Full Course</h3>
+            <p class="author">Bro Code</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/drQK8ciCAjY/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>Learn Java in One Video - 15-minute Crash Course</h3>
+            <p class="author">Coding With Jhon</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/uHyfQV0kbgo/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>Belajar Java [Dasar] - 01 - Apa itu Java?</h3>
+            <p class="author">Kelas Terbuka</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-extend" id="card-extend-java">
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/grEKMHGYyns/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Learn Java 8 - Full Tutorial for Beginners</h3>
+              <p class="author">freeCodeCamp.org</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/BFaJYIOhL3U/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>
+                I Learned Java in 14 Days using THIS Framework (learn any
+                language!)
+              </h3>
+              <p class="author">Internet Made Coder</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/K1iu1kXkVoA/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Generics In Java - Full Simple Tutorial</h3>
+              <p class="author">Coding With Jhon</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/eIrMbAQSU34/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Java Tutorial for Beginners</h3>
+              <p class="author">Programming with Mosh</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/5o3fMLPY7qY/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Java GUI Tutorial - Make a GUI in 13 Minutes</h3>
+              <p class="author">Alex Lee</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/VHbSopMyc4M/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Why take this Java Course?</h3>
+              <p class="author">Neso Academy</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/_25BmjGfjQQ/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>TUTORIAL JAVA DATABASE (BAHASA INDONESIA)</h3>
+              <p class="author">Eko Kurniawan Khanedy</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/bm0OyhwFDuY/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Java Tutorial for Beginners 2023</h3>
+              <p class="author">Telusko</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+          </div>
+          <button onclick="ExtendCardJava()" id="btn-java">
+            Lihat Selengkapnya
+          </button>
+        </div>
+      </div>
+
+      <div class="golang">
+        <h3 class="heading-golang">Go/Golang</h3>
+        <p class="article">
+          Go adalah bahasa pemrograman open-source yang dikembangkan oleh
+          Google. Bahasa ini fokus pada kesederhanaan, efisiensi, dan
+          produktivitas pengembangan. Go memiliki dukungan bawaan untuk
+          konkurensi dengan goroutine, manajemen memori otomatis, tipe data
+          terstruktur, dan alat pengembangan yang kuat. Go banyak digunakan
+          dalam pengembangan sistem, jaringan, dan aplikasi web.
+        </p>
+        <h3>Temukan Kursusnya</h3>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/YS4e4q9oBaU/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>Learn Go Programming - Golang Tutorial for Beginners</h3>
+            <p class="author">freeCodeCamp.org</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/gHtRBGqXYlA/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>
+              Golang CRUD with MySQL and Form Validation (Bahasa Indonesia)
+            </h3>
+            <p class="author">TentangKode</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/R30g_H84chg/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>Belajar Go-Lang - 1 Apa itu Go-Lang?</h3>
+            <p class="author">Eko Kurniawan Khanedy</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-img">
+            <img
+              src="https://img.youtube.com/vi/U2PpMZ7hWpg/maxresdefault.jpg"
+              width="288"
+              alt=""
+            />
+            <h3>Should you learn Go in 2023?</h3>
+            <p class="author">Dreams of Code</p>
+            <div class="rating">
+              <div class="star">
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+                <i class="feather" width="16" data-feather="star"></i>
+              </div>
+              <p>0/5</p>
+            </div>
+            <div class="price">
+              <p>Rp. 90.000</p>
+              <p>Rp. 290.000</p>
+            </div>
+            <button>Beli Sekarang</button>
+          </div>
+          <div class="card-extend" id="card-extend-golang">
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/MDy7JQN5MN4/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>
+                The Most Efficient Struct Configuration Pattern For Golang
+              </h3>
+              <p class="author">Anthony GG</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/YkY2Ktewd_4/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>
+                Alur Belajar Bahasa Golang untuk Pemula | Upskilling With SUHU
+              </h3>
+              <p class="author">SUHU TV</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/ZJ6dVVobjaI/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Rust vs Go - Which is Better and Why?</h3>
+              <p class="author">Federico Terzi</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/_r_bHJkSzpo/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>GOLANG UNTUK PEMULA, APAKAH LAYAK?</h3>
+              <p class="author">Dea Afrizal</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/446E-r0rXHI/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Go in 100 Seconds</h3>
+              <p class="author">Fireship</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/xIN9HLThMq0/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>A Basic Web Application - Web Development with Go Sample</h3>
+              <p class="author">Jon Calhoun</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/jFfo23yIWac/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>
+                Learn Go Programming by Building 11 Projects – Full Course
+              </h3>
+              <p class="author">freeCodeCamp.org</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+            <div class="card-img">
+              <img
+                src="https://img.youtube.com/vi/YYjb_RszQYY/maxresdefault.jpg"
+                width="288"
+                alt=""
+              />
+              <h3>Golang CRUD Web Tutorial (Bahasa Indonesia)</h3>
+              <p class="author">egardev</p>
+              <div class="rating">
+                <div class="star">
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                  <i class="feather" width="16" data-feather="star"></i>
+                </div>
+                <p>0/5</p>
+              </div>
+              <div class="price">
+                <p>Rp. 90.000</p>
+                <p>Rp. 290.000</p>
+              </div>
+              <button>Beli Sekarang</button>
+            </div>
+          </div>
+          <button onclick="ExtendCardGolang()" id="btn-golang">
+            Lihat Selengkapnya
+          </button>
+        </div>
+      </div>
+      <a href="" class="show-all">Lihat semua course di Kursusku ></a>
+    </section>
+
+    <!-- Section kategori -->
+    <section class="category" id="category">
+      <h2>Topik Unggulan Berdasarkan Kategori</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Development</th>
+            <th>Office</th>
+            <th>Designer</th>
+            <th>Data Scientist</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="">Python </a><br />200.000 Pelajar</td>
+            <td><a href="">Pengelolaan Data Excel</a><br />213.009 Pelajar</td>
+            <td><a href="">Photosop</a><br />213.009 Pelajar</td>
+            <td><a href="">Preprocessing Data</a><br />213.009 Pelajar</td>
+          </tr>
+          <tr>
+            <td><a href="">Web Development</a><br />213.009 Pelajar</td>
+            <td><a href="">Management Data</a><br />213.009 Pelajar</td>
+            <td><a href="">Corel Draw</a><br />213.009 Pelajar</td>
+            <td><a href="">RapidMiner</a><br />213.009 Pelajar</td>
+          </tr>
+          <tr>
+            <td><a href="">React JS</a><br />213.009 Pelajar</td>
+            <td><a href="">Desain PPT</a><br />10.000 Pelajar</td>
+            <td><a href="">Blender</a><br />213.009 Pelajar</td>
+            <td><a href="">Scraping Data</a><br />213.009 Pelajar</td>
+          </tr>
+          <tr>
+            <td><a href="">JavaScript</a><br />213.009 Pelajar</td>
+            <td>
+              <a href="">Pengelola Dokumen Microsoft Word</a><br />30.000
+              Pelajar
+            </td>
+            <td><a href="">Adobe Ilustrator</a><br />213.009 Pelajar</td>
+            <td>
+              <a href="">Pengelolaan Data Statistik</a><br />213.009 Pelajar
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button>Lihat Selengkapnya</button>
+    </section>
+
+    <!-- Section kerjasama -->
+    <section class="team-work" id="team">
+      <h2>
+        Kursus<span>ku </span>Sudah Menjalin kerjasama Dengan 1.000+ Perusahaan
+        Teknologi
+      </h2>
+      <p class="desc">
+        Kursusku telah menjalin kerjasama dengan lebih dari 1.000 perusahaan
+        teknologi, memberikan peluang magang, penempatan kerja, dan proyek
+        kolaboratif kepada peserta kursus. Dengan kemitraan yang luas ini,
+        Kursusku menjadi pilihan utama bagi mereka yang ingin mengembangkan
+        keterampilan teknologi dan membangun jaringan profesional yang luas.
+      </p>
+      <div class="content">
+        <div>
+          <img src="./img/google-logo-9808.png" width="60" alt="" />
+          <p>Google</p>
+        </div>
+        <div>
+          <img src="./img/amazon.png" width="160" alt="" />
+          <p>Amazon Web Service</p>
+        </div>
+        <div>
+          <img src="./img/github-mark.png" width="60" alt="" />
+          <p>Github Student</p>
+        </div>
+        <div>
+          <img src="./img/Microsoft-Logo-PNG-HD.png" width="60" alt="" />
+          <p>Microsoft</p>
+        </div>
+        <div>
+          <img src="./img/png-apple-logo-9711.png" width="60" alt="" />
+          <p>Apple</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section instruktur -->
+    <section class="instruktur" id="instruktur">
+      <article>
+        <h2>Ayo Menjadi Instruktur di Kursus<span>ku</span></h2>
+        <p>
+          Bergabunglah sebagai instruktur di Kursusku dan bagikan pengetahuan
+          serta pengalaman Anda kepada ribuan siswa yang ingin belajar. Mari
+          jadilah bagian dari komunitas pembelajaran daring yang berkembang
+          pesat dan bantu mengubah kehidupan orang melalui pendidikan online.
+          Ayo, wujudkan impian pembelajaran bersama di Kursusku!
+        </p>
+        <button>Daftar Menjadi Instruktur</button>
+      </article>
+      <img src="img/pengajar.png" width="500" alt="" />
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <table>
+        <tbody>
+          <tr>
+            <td>Kursusku karir</td>
+            <td>Blog</td>
+            <td>Persyaratan</td>
+          </tr>
+          <tr>
+            <td>Instruktur</td>
+            <td>Bantuan</td>
+            <td>Kebijakan privasi</td>
+          </tr>
+          <tr>
+            <td>Pelajar</td>
+            <td>Dukungan</td>
+            <td>Kebijakan cookie</td>
+          </tr>
+          <tr>
+            <td>Course</td>
+            <td>Investor</td>
+            <td>Situs web</td>
+          </tr>
+        </tbody>
+      </table>
+      <select id="language-select">
+        <option value="id">Indonesia</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+      </select>
+      <h1><span>Kursus</span>ku</h1>
+
+      <p>
+        Copyright 2023 ©️
+        <a href="mailto:email@widadalfajri.com">Widad Al Fajri</a> | Kursusku
+      </p>
+    </footer>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

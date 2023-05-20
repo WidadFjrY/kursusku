@@ -1,0 +1,970 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+    --primary-color: #fcfcfc;
+    --hard-grey-color: #3a3f47;
+    --soft-grey-color: #5d646f;
+    --scondary-color: #f8b501;
+    --font-color: #131313;
+    --hover-animation: ease-in-out 0.1s;
+    --section-padding: 0rem 10rem;
+    --h2-font-size: 2rem;
+}
+
+::selection {
+    background-color: var(--scondary-color);
+    color: var(--primary-color);
+}
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    width: 95vw;
+    padding: 1.2rem 2rem;
+    background-color: white;
+    max-height: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav h1,
+nav h1 a {
+    color: var(--hard-grey-color)
+}
+
+nav h1 span {
+    color: var(--scondary-color);
+}
+
+nav form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav form a {
+    color: var(--font-color);
+    transition: var(--hover-animation);
+}
+
+nav form a:hover {
+    color: var(--scondary-color);
+}
+
+nav form input {
+    width: 35rem;
+    height: 2rem;
+    border-radius: 3rem;
+    border: 1px solid var(--soft-grey-color);
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    background-color: var(--primary-color);
+}
+
+nav form input:focus {
+    outline: 1px solid var(--soft-grey-color);
+}
+
+nav form img {
+    position: absolute;
+    right: 0.8rem;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    padding: 0;
+    color: var(--font-color);
+    font-size: 1rem;
+    transition: var(--hover-animation);
+}
+
+nav ul li a:hover {
+    color: var(--scondary-color);
+}
+
+nav ul li #dummy {
+    position: absolute;
+    width: 10rem;
+    height: 1.4rem;
+}
+
+nav ul li #pelajar-content,
+nav ul li #mengajar-content {
+    padding: 1rem;
+    position: absolute;
+    bottom: -12.1rem;
+    width: 15rem;
+    max-height: 50rem;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+nav ul li #mengajar-content {
+    bottom: -8.95rem;
+}
+
+nav ul #pelajar-content p,
+nav ul #mengajar-content p {
+    font-weight: 500;
+    text-align: center;
+}
+
+nav ul li:hover #pelajar-content,
+nav ul li:hover #mengajar-content {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav ul li div button {
+    width: 100%;
+    margin-top: -0.5rem;
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav div button {
+    background-color: var(--primary-color);
+    border: 1px solid var(--soft-grey-color);
+    color: var(--font-color);
+    width: 6rem;
+    padding: 0.6rem 0;
+    transition: var(--hover-animation);
+    cursor: pointer;
+}
+
+nav div button:nth-child(2) {
+    background-color: var(--soft-grey-color);
+    color: white;
+}
+
+nav div button:hover:nth-child(1) {
+    background-color: rgb(226, 226, 226);
+}
+
+nav div button:hover:nth-child(2) {
+    background-color: var(--hard-grey-color);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.103);
+    z-index: 9999;
+    display: none;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#overlay.active {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Form login */
+.form-login {
+    display: none;
+    z-index: 999999;
+    position: fixed;
+    top: 11rem;
+    left: 35vw;
+    background-color: var(--primary-color);
+    width: 30vw;
+    height: 50vh;
+}
+
+.form-login form {
+    margin: 2rem 5rem;
+}
+
+.form-login h1 {
+    text-align: center;
+}
+
+.form-login h1 {
+    margin-top: 2rem;
+    color: var(--hard-grey-color);
+    font-size: 2rem;
+}
+
+.form-login form label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.form-login form input {
+    margin-top: 1rem;
+    width: 90%;
+    border: none;
+    border-bottom: 1.5px solid #bebebe;
+    padding-bottom: 0.8rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+}
+
+.form-login .user {
+    top: 9rem;
+    left: 5rem;
+    position: absolute;
+    color: #bebebe;
+}
+
+.form-login .lock {
+    color: #bebebe;
+    top: 14rem;
+    left: 5rem;
+    position: absolute;
+}
+
+.form-login a {
+    position: absolute;
+    right: 5rem;
+    top: 17rem;
+    font-size: 0.8rem;
+    color: var(--font-color);
+    transition: 0.2s;
+}
+
+.form-login a:hover {
+    color: var(--scondary-color);
+}
+
+.form-login .remember-me {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 17rem;
+    left: 5rem;
+    gap: 0.5rem;
+}
+
+.form-login .remember-me .checkbox {
+    font-size: 0.8rem;
+    color: var(--font-color);
+}
+
+.form-login button {
+    width: 67%;
+    cursor: pointer;
+    margin: 1.5rem 5rem;
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    background-color: var(--hard-grey-color);
+    transition: 0.2s;
+}
+
+.form-login button:hover {
+    background-color: var(--soft-grey-color);
+}
+
+.form-login form input:focus {
+    outline: none;
+}
+
+/* Verofikasi robot */
+.verifikasi {
+    background-color: white;
+    border: 1px solid var(--soft-grey-color);
+    justify-content: center;
+    display: none;
+    position: fixed;
+    left: 17.4vw;
+    top: -6rem;
+    margin: 20rem;
+    z-index: 9999999;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    align-items: center;
+}
+
+.verifikasi input {
+    width: 200px;
+}
+
+#gambar {
+    bottom: 7.55rem;
+    width: 50px;
+    position: absolute;
+    transition: transform;
+}
+
+/* landing Section */
+.landing-section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    height: 100vh;
+    background-color: var(--primary-color);
+    padding: var(--section-padding);
+}
+
+.landing-section div article h1 {
+    font-size: 3rem;
+    color: var(--hard-grey-color);
+}
+
+
+.landing-section div article h2 {
+    margin-top: -1rem;
+    font-size: 3rem;
+    color: var(--hard-grey-color);
+}
+
+.landing-section div article h2 span {
+    margin-top: -1rem;
+    font-size: 3rem;
+    color: var(--scondary-color);
+}
+
+.landing-section div article p {
+    margin-bottom: 3rem;
+    margin-top: 0.6rem;
+}
+
+.landing-section div article .btn {
+    background-color: var(--soft-grey-color);
+    padding: 1rem 2rem;
+    color: var(--primary-color);
+    transition: 0.2s;
+}
+
+.landing-section div article .btn:hover {
+    background-color: var(--hard-grey-color);
+}
+
+.landing-section div img {
+    box-shadow: rgba(248, 181, 1, 0.4) 5px 5px, rgba(248, 181, 1, 0.3) 10px 10px,
+        rgba(248, 181, 1, 0.2) 15px 15px, rgba(248, 181, 1, 0.1) 20px 20px,
+        rgba(248, 181, 1, 0.05) 25px 25px;
+    border-radius: 1rem;
+}
+
+/* Content section */
+.content {
+    padding: var(--section-padding);
+}
+
+.content article {
+    padding-top: 4rem;
+}
+
+.content article h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+}
+
+.content article h2 span {
+    color: var(--scondary-color);
+}
+
+.content article p {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding-right: 30rem;
+}
+
+.content .radio-filter {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2.5rem;
+    margin-left: 1rem;
+}
+
+.content .radio-filter div input {
+    display: none;
+}
+
+.content .radio-filter div {
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.content .radio-filter div label {
+    cursor: pointer;
+    color: var(--font-color);
+    font-size: smaller;
+}
+
+.content .content-filter div {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding: 1rem;
+    padding-right: 30rem;
+    border: 1px solid var(--hard-grey-color);
+}
+
+.content .content-filter div h2 {
+    font-size: 1.5rem;
+    color: var(--hard-grey-color);
+}
+
+.content .content-filter div p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.content .content-filter div button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--hard-grey-color);
+    color: var(--font-color);
+    transition: 0.2s;
+}
+
+.content .content-filter div button:hover {
+    background-color: var(--soft-grey-color);
+    color: var(--primary-color);
+}
+
+/* Content Programing */
+.content-programing {
+    padding: var(--section-padding);
+    padding-top: 4rem;
+    margin-top: -1rem;
+}
+
+.content-programing h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+}
+
+.content-programing h3 {
+    color: var(--font-color);
+    margin-top: 1.5rem;
+}
+
+.content-programing .java .article,
+.content-programing .golang .article {
+    padding-right: 30rem;
+}
+
+.content-programing .heading-java,
+.content-programing .heading-golang {
+    font-size: 1.5rem;
+    color: var(--hard-grey-color);
+    margin-bottom: 0.8rem;
+}
+
+.content-programing .card,
+.content-programing .card .card-extend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.content-programing .card .card-extend {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.content-programing .card .card-img {
+    position: relative;
+    margin-top: 1rem;
+    width: 18rem;
+    height: 20rem;
+}
+
+.content-programing .card .card-img h3,
+.content-programing .card .card-img h3 a {
+    color: var(--hard-grey-color);
+    margin-top: -0.2rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--hover-animation);
+}
+
+.content-programing .card .card-img h3:hover,
+.content-programing .card .card-img h3 a:hover {
+    color: var(--scondary-color);
+}
+
+.content-programing .card .card-img .author {
+    font-size: 0.8rem;
+    color: var(--soft-grey-color);
+}
+
+.content-programing .card .card-img .rating .star {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.content-programing .card .card-img .rating {
+    position: absolute;
+    bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content-programing .card .card-img .rating p {
+    font-size: 0.8rem;
+}
+
+.content-programing .card .card-img .price {
+    position: absolute;
+    bottom: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.content-programing .card .card-img .price p {
+    font-size: 0.8rem;
+}
+
+.content-programing .card .card-img .price p:nth-child(2) {
+    text-decoration: line-through;
+    color: var(--soft-grey-color);
+}
+
+.content-programing .card .card-img button {
+    position: absolute;
+    width: 100%;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    border: 1px solid var(--hard-grey-color);
+    padding: 0.3rem 1rem;
+    transition: 0.2s;
+    bottom: 0;
+}
+
+.content-programing .card .card-img button:hover {
+    background-color: var(--scondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--scondary-color);
+}
+
+.content-programing .card button {
+    padding: 0.4rem 10rem;
+    background-color: var(--soft-grey-color);
+    cursor: pointer;
+    border: 1px solid var(--hard-grey-color);
+    transition: 0.2s;
+    margin-top: -2rem;
+}
+
+.content-programing .card #btn-java,
+.content-programing .card #btn-golang {
+    color: white;
+}
+
+.content-programing .card button:hover {
+    background-color: var(--hard-grey-color);
+}
+
+.content-programing .golang {
+    margin-top: 4rem;
+}
+
+.content-programing .show-all {
+    color: var(--scondary-color);
+}
+
+.content-programing .show-all:hover {
+    text-decoration: underline;
+}
+
+/* Section kategori */
+.category {
+    background-color: #f7f7f7;
+    padding: var(--section-padding);
+    margin-top: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+}
+
+.category h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+    margin-bottom: 2rem;
+}
+
+.category table thead tr th {
+    text-align: left;
+    padding-bottom: 1rem;
+    color: var(--hard-grey-color);
+}
+
+.category table thead tr th,
+.category table tbody tr td {
+    padding-right: 6rem;
+}
+
+.category table tbody tr td {
+    padding-bottom: 2rem;
+}
+
+.category table a {
+    color: var(--scondary-color);
+}
+
+.category table a:hover {
+    text-decoration: underline;
+}
+
+.category button {
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    border: 1px solid var(--soft-grey-color);
+    background-color: var(--soft-grey-color);
+    transition: 0.2s;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.category button:hover {
+    background-color: var(--hard-grey-color);
+    color: white;
+}
+
+/* Team */
+.team-work {
+    padding: var(--section-padding);
+    margin-top: 4rem;
+}
+
+.team-work h2 {
+    text-align: center;
+    color: var(--hard-grey-color);
+    font-size: 2rem;
+}
+
+.team-work h2 span {
+    color: var(--scondary-color);
+}
+
+.team-work .desc {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.team-work .content {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+
+.team-work .content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-work .content div img {
+    filter: grayscale();
+    transition: 0.5s;
+}
+
+.team-work .content div img:hover {
+    filter: none;
+}
+
+.team-work .content div p {
+    margin-top: 0.8rem;
+}
+
+/* Instruktur */
+.instruktur {
+    display: flex;
+    padding: var(--section-padding);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10rem;
+}
+
+.instruktur article p {
+    margin-top: 1rem;
+}
+
+.instruktur article h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+}
+
+.instruktur article h2 span {
+    color: var(--scondary-color);
+}
+
+.instruktur article button {
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    background-color: var(--soft-grey-color);
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.instruktur article button:hover {
+    background-color: var(--hard-grey-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--hard-grey-color);
+    padding: var(--section-padding);
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    position: relative;
+}
+
+footer table tbody tr td {
+    color: white;
+    padding-right: 10rem;
+    padding-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+footer select {
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 0.6rem 4rem;
+    color: white;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    transition: 0.2s;
+    cursor: pointer;
+    outline: none;
+}
+
+footer select option {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+footer select:hover {
+    background-color: var(--scondary-color);
+    color: white;
+    border: 1px solid var(--scondary-color);
+}
+
+footer h1 {
+    color: var(--scondary-color);
+    font-size: 2.5rem;
+    bottom: 2rem;
+    left: 2rem;
+    position: absolute;
+}
+
+footer h1 span {
+    color: white;
+}
+
+footer p {
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+    color: white;
+}
+
+footer p a {
+    color: var(--scondary-color);
+}
+
+/* course-videos.html */
+/* video */
+.course-video .content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.course-video .content div h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+}
+
+.course-video .content div ul {
+    margin-top: 1rem;
+}
+
+
+.course-video .content div ul li {
+    margin-top: 1rem;
+    color: var(--hard-grey-color);
+    font-weight: 700;
+}
+
+.course-video .content div .play {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.course-video .content div ul li p {
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.course-video .content div ul li:nth-child(2) {
+    color: var(--scondary-color);
+}
+
+.course-video .content div button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--soft-grey-color);
+    border: none;
+    transition: 0.2s;
+}
+
+
+.course-video .content div button:hover {
+    background-color: var(--hard-grey-color);
+}
+
+.course-video .description {
+    padding: var(--section-padding);
+    margin-top: 2rem;
+}
+
+.course-video .description pre {
+    color: var(--font-color);
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+
+}
+
+/* Instruktur profile */
+.instruktur-profile {
+    padding: var(--section-padding);
+}
+
+.instruktur-profile .instruktur-profile-desc {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.instruktur-profile .instruktur-profile-desc div h3 {
+    color: var(--hard-grey-color);
+}
+
+.instruktur-profile h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+}
+
+.course-video .description h2 {
+    font-size: 2rem;
+    color: var(--hard-grey-color);
+}
+
+/* Komentar */
+.comments {
+    padding: var(--section-padding);
+    padding-right: 40rem;
+}
+
+.comments h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: var(--hard-grey-color);
+}
+
+.comments .comment {
+    margin: 2rem 0rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.comments .comment h3 {
+    color: var(--hard-grey-color);
+}
+
+.comments .show-all {
+    color: var(--scondary-color);
+    cursor: pointer;
+}
+
+.comments .show-all:hover {
+    text-decoration: underline;
+}
+
+.comments textarea {
+    resize: none;
+    margin-top: 2rem;
+    display: block;
+}
+
+.comments button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    background-color: var(--hard-grey-color);
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    margin-bottom: 10rem;
+}
+
+.comments button:hover {
+    background-color: var(--soft-grey-color);
+}

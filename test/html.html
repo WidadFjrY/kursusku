@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <img src="../img/puzzel.png" id="gambar" alt="" />
+      <img src="../img/bg-puzzel.jpg" width="300" alt="" />
+      <input type="range" min="0" max="100" value="0" id="slider" />
+    </div>
+    <script>
+      const slider = document.getElementById("slider");
+      const gambar = document.getElementById("gambar");
+
+      slider.addEventListener("input", function () {
+        const nilaiSlider = slider.value;
+        const pergeseran = (nilaiSlider - 50) * 2;
+
+        console.log(nilaiSlider);
+        if (nilaiSlider >= 86 && nilaiSlider <= 88) {
+          console.log("sukses");
+        }
+
+        gambar.style.transform = `translateX(${pergeseran}px)`;
+      });
+    </script>
+
+    <style>
+      div {
+        position: relative;
+        margin: 20rem;
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        align-items: center;
+      }
+      div input {
+        width: 200px;
+      }
+      #gambar {
+        bottom: 6rem;
+        width: 50px;
+        position: absolute;
+        transition: transform;
+      }
+    </style>
+  </body>
+</html>
